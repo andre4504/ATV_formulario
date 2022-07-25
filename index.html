@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Dedé's Academy</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body bgcolor="black" text="white">
+
+        <font face="calibri">
+        
+            <hr color="orangered" size="4" width="800" />
+
+            <h1 align="center"><font color="orangered" face="consolas"> Dedé's Academy </font></h1>
+
+            <p align="center" >
+                <img src="img/logo.png" alt="halter" width="100" height="80" bgcolor="orangered">
+            </p>
+            
+            <hr color="orangered" size="4" width="500" />
+
+            <br/>
+
+            <h2 align="center"><font color="orangered"> Inscrição - Novo Aluno </font></h2>
+            <hr color="orangered" size="4" width="200" />
+
+            <br/>
+
+            <table align="center" border="1" bordercolor="orangered">
+                <tr><td>
+                    <fieldset>
+                        <legend> Informe os Dados Pessoais </legend>
+                        <form action="enviar.php" method="post" name="cadastro">
+
+                            <table>
+                                <tr>
+                                    <td align="center" colspan="4"> 
+                                        <label><input type="radio" name="tipo" id="tipo" value="A" checked aria-disabled="false"> 
+                                        Aluno </label>
+                                        <label><input type="radio" name="tipo" id="tipo" value="P" disabled> 
+                                        Professor </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <br/> <label> Nome: </label> </td>
+                                    <td> <br/> 
+                                        <input type="text" name="nome" id="nome" size="32"
+                                        placeholder="Digite o nome completo" maxlength="60" required> 
+                                    </td>
+                                    <td align="center"> <br/> <label> Data de <br/> Nascimento: </label> </td>
+                                    <td> <br/> <input type="date" id="data_nasc" name="data_nasc" 
+                                        min="1950-01-01" required/> 
+                                    </td>             
+                                </tr>
+                                <tr>
+                                    <td> <br/> <label> Sexo: </label> </td>
+                                    <td> <br/>
+                                        <label><input type="radio" name="sexo" id="sexo" value="M" required> 
+                                        Masculino </label>
+                                        <label><input type="radio" name="sexo" id="sexo" value="F" required> 
+                                        Feminino </label> 
+                                    </td>  
+                                    <td> <br/> <label> CPF: </label> </td>
+                                    <td> <br/>
+                                        <input type="text" name="cpf" id="cpf" size="13"
+                                        placeholder="000.000.000-00" maxlength="14" required> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <br/><br/> <label> E-mail: </label> </td>
+                                    <td> <br/><br/>
+                                        <input type="email" name="mail" id="mail" size="27"
+                                        placeholder="Digite um e-mail válido" required> 
+                                    </td>
+                                    <td> <br/><br/> <label> Telefone: </label> </td>
+                                    <td> <br/><br/> 
+                                        <input type="tel" name="telefone" id="telefone" size="13"
+                                        placeholder="(00) 00000-0000" required> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <br/><br/> <label> Endereço: </label> </td>
+                                    <td> <br/><br/> 
+                                        <input type="text" name="endereco" id="endereco" size="27"
+                                        placeholder="Digite o endereço" required> 
+                                    </td>
+                                    <td> <br/><br/> <label> Número: </label> </td>
+                                    <td> <br/><br/> 
+                                        <input type="text" name="numero" id="numero" size="3"
+                                        placeholder="0000" maxlength="4"> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <br/><br/> <label> Cidade: </label> </td>
+                                    <td> <br/><br/> 
+                                        <input type="text" name="cidade" id="cidade" size="15"
+                                        placeholder="Digite a cidade" required> 
+                                    </td>
+                                    <td> <br/><br/> <label> Estado: </label> </td>
+                                    <td> <br/><br/>
+                                        <select name="estado" id="estado" required> 
+                                            <option value="" selected>--Selecione--</option>
+                                            <optgroup label="Norte">
+                                                <option value="AC">AC</option>
+                                                <option value="AM">AM</option>
+                                                <option value="AP">AP</option>    
+                                                <option value="MA">MA</option>    
+                                                <option value="PA">PA</option>    
+                                                <option value="RO">RO</option>    
+                                                <option value="RR">RR</option>    
+                                                <option value="TO">TO</option>
+                                            </optgroup>
+
+                                            <optgroup label="Nordeste">
+                                                <option value="AL">AL</option>
+                                                <option value="BA">BA</option>
+                                                <option value="CE">CE</option>
+                                                <option value="PB">PB</option>
+                                                <option value="PE">PE</option>
+                                                <option value="PI">PI</option>
+                                                <option value="RN">RN</option>
+                                                <option value="SE">SE</option>                        
+                                            </optgroup>
+
+                                            <optgroup label="Centro-Oeste">
+                                                <option value="DF">DF</option>
+                                                <option value="GO">GO</option>
+                                                <option value="MS">MS</option> 
+                                                <option value="MT">MT</option>                        
+                                            </optgroup>
+
+                                            <optgroup label="Sudeste">
+                                                <option value="ES">ES</option>   
+                                                <option value="MG">MG</option>   
+                                                <option value="RJ">RJ</option>  
+                                                <option value="SP">SP</option>                
+                                            </optgroup>
+
+                                            <optgroup label="Sul">
+                                                <option value="PR">PR</option>   
+                                                <option value="RS">RS</option>  
+                                                <option value="SC">SC</option>                  
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                </tr>  
+                            </table>
+                    </fieldset>
+                    </td>                    
+                </tr>
+            </table>
+            <br/>
+            <table align="center" border="1" bordercolor="orangered">
+                <tr><td>
+                    <fieldset>
+                        <legend> Informe os Dados Adicionais </legend>
+                            <table>
+                                <tr>
+                                    <td> <br/><br/><br/> <label> Altura: </label> </td>
+                                    <td> <br/><br/><br/>
+                                        <input type="text" name="altura" id="altura" size="4"
+                                        placeholder="0.00m" maxlength="6" required>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label> Peso: </label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="text" name="peso" id="peso" size="4"
+                                        placeholder="00.00kg" maxlength="9" required>                                        
+                                    </td>
+                                    <td> <br/><br/><br/> <label> Objetivo: </label> </td>
+                                    <td> <br/><br/><br/>
+                                        <select name="objetivo" id="objetivo" required>
+                                            <option value="" selected> --Selecione-- </option>
+                                            <optgroup label="Musculação">
+                                                <option value="emagrecimento"> Emagrecimento </option>
+                                                <option value="hipertrofia"> Hipertrofia </option>
+                                                <option value="definicao"> Definição </option>
+                                            </optgroup>
+                                            <optgroup label="Outros">
+                                                <option value="natacao"> Natação </option>
+                                                <option value="luta"> Luta </option>
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> <br/><br/> <label> Escolha a cor do crachá de aluno: </label> </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4"> <input type="color" name="cor" id="cor"> </th>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="2"> <br/><br/> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Disponibilidade:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Data) </label> </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>
+                                            <input type="checkbox" name="segunda" id="segunda" value="segunda">
+                                        Segunda-feira</label>
+                                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>
+                                        <input type="checkbox" name="terca" id="terca" value="terca">
+                                        Terça-feira</label>
+                                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>
+                                        <input type="checkbox" name="quarta" id="quarta" value="quarta">
+                                        Quarta-feira</label>
+                                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>
+                                        <input type="checkbox" name="quinta" id="quinta" value="quinta">
+                                        Quinta-feira</label>
+                                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label>
+                                        <input type="checkbox" name="sexta" id="sexta" value="sexta">
+                                        Sexta-feira</label>
+                                        <br/>
+                                        <label>
+                                        <input type="checkbox" name="sabado" id="sabado" value="sabado">
+                                        Sábado</label>
+                                        <br/>&nbsp;&nbsp;
+                                        <label>
+                                        <input type="checkbox" name="domingo" id="domingo" value="domingo">
+                                        Domingo</label>
+                                        <br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> <br/> &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label> (Horário) </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="time" name="horario" id="horario">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> <br/> <label> Nível do Aluno: </label> </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> <label> Iniciante </label> <input type="range" name="nivel" id="nivel"> 
+                                        <label> Avançado </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="4"> <label> Intermediário </label> </td>
+                                </tr>
+                                <tr>
+                                    <th>                                        
+                                    </th>
+                                    <td> <br/><br/>
+                                        <button type="reset" id="limpar" name="limpar">
+                                            <img src="img/trash.png" width="40" height="40" alt="Reset">
+                                        </button>
+                                    </td>
+                                    <td></td>
+                                    <td> <br/><br/>
+                                        <button type="submit" id="enviar" name="enviar">
+                                            <img src="img/send.png" width="40" height="40" alt="Submit">
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <td>
+                                        <input type="reset" id="limpar" name="limpar" value="LIMPAR"/>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" id="enviar" name="enviar" value="ENVIAR"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </fieldset>
+                    </td>                    
+                </tr>
+            </table>
+
+            <br/><br/><br/>
+
+            <hr color="orangered" size="4" width="800" />
+
+        </font>
+
+    </body>
+</html>
